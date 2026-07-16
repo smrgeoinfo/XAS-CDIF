@@ -34,6 +34,7 @@
                     }
                 }
             ],
+            "schema:dateModified":"2024-08-26",
             "schema:license": ["https://creativecommons.org/publicdomain/zero/1.0/"],
             "schema:distribution": [
                 {
@@ -47,7 +48,7 @@
                     "schema:encodingFormat": ["text/plain"],
                     "dcterms:conformsTo": ["https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/spec.md"],
                     "cdi:allowsDuplicates": false,
-                    "cdi:has_TextMapping": [
+                    "cdi:hasPhysicalMapping": [
                         {
                             "@type": "cdi:TextMapping",
                             "cdi:formats": {"@id": "xas:monochromatorEnergyVariable"},
@@ -108,7 +109,7 @@
             "prov:wasGeneratedBy": {
                 "@id": "ex:provevent_246376",
                 "@type": [
-                    "Event",
+                    "prov:Activity",
                     "xas:Analysis_Event"
                 ],
                 "schema:identifier": "20241111_DSC_NU_OREX-803224-0_1",
@@ -247,7 +248,7 @@
                         "schema:PropertyValue"
                     ],
                     "schema:name": "energy",
-                    "schame:alternateName": "Monochromator energy",
+                    "scheme:alternateName": "Monochromator energy",
                     "schema:description": "The energy selected by the X-ray monochromator and delivered to the sample during an absorption scan.",
                     "schema:propertyID": {"@id": "xas:Monochromator_Energy"},
                     "schema:unitText": "eV",
