@@ -155,13 +155,15 @@
       ],
       "schema:inDefinedTermSet": "https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md",
       "schema:name": "K-edge",
-      "schema:termCode": "K"
+      "schema:termCode": "K",
+      "schema:about": "Element.edge"
     },
     {
       "@type": [
         "schema:DefinedTerm"
       ],
-      "schema:termCode": "Se"
+      "schema:termCode": "Se",
+      "schema:about": "Element.symbol"
     },
     "Earth and Environmental Sciences"
   ],
@@ -207,6 +209,9 @@
       },
       {
         "@id": "https://w3id.org/cdif/discovery/1.1"
+      },
+      {
+        "@id": "https://w3id.org/cdif/xasCore/1.0"
       }
     ],
     "schema:about": {
@@ -314,7 +319,8 @@
             }
           ],
           "schema:value": "12658.0",
-          "schema:name": "edge_energy"
+          "schema:name": "edge_energy",
+          "schema:description": "When setting up an XAS scan, the analyst tells the acquisition software which absorption edge they're targeting (e.g., Fe K-edge at 7112 eV, Cu K-edge at 8979 eV). The software uses this value to define the scan energy range — typically scanning from some energy below the edge to some energy above it, with denser energy point spacing near the edge and coarser spacing further away. The edge energy value determines where the scan is centered and how the energy grid is constructed. (from Claude)"
         }
       ],
       "schema:startDate": "2008-04-10T21:58:50",
