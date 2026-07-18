@@ -30,12 +30,17 @@ Validation: **6 errors vs xasCore/1.0**, **7 vs XASdata** (the extra is the `xas
 
 ## Generator changes still needed
 
-### 1. Provenance activity `@type`  ·  *root cause of 1 error*
+### 1. Provenance activity `@type` + `schema:additionalType`  ·  *root cause of 1 error*
 ```
 current:  "@type": ["schema:Event", "prov:Activity"]
-needed:   "@type": ["schema:Action", "xas:AnalysisEvent", "prov:Activity"]
+needed:   "@type": ["schema:Action", "prov:Activity"],
+          "schema:additionalType": ["xas:AnalysisEvent"]
 ```
-`schema:Action` (not `Event`); add `xas:AnalysisEvent`.
+Use `schema:Action` (not `Event`). The XAS domain type `xas:AnalysisEvent` now goes
+in **`schema:additionalType`** (a list), **not** in `@type` — `@type` holds only the
+standard schema.org / PROV types. As of 2026-07-17 xasCore composes the `xasGeneratedBy`
+building block, which **requires** the activity to carry `schema:additionalType`
+containing `xas:AnalysisEvent`.
 
 ### 2. Instrument wrapper — NXsource + NXmonochromator in `schema:hasPart`  ·  *1 error*
 Current `prov:used[0].schema:instrument` is a **list** of instrument entities whose
