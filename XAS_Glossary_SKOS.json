@@ -272,6 +272,21 @@
 				},
 				{
 					"@id": "http://cdi4exas.org/website"
+				},
+				{
+					"@id": "http://cdi4exas.org/probe"
+				},
+				{
+					"@id": "http://cdi4exas.org/point_group"
+				},
+				{
+					"@id": "http://cdi4exas.org/calibration_method"
+				},
+				{
+					"@id": "http://cdi4exas.org/experiment_documentation"
+				},
+				{
+					"@id": "http://cdi4exas.org/X-Ray_Monitor"
 				}
 			]
 		},
@@ -1940,6 +1955,86 @@
 				"@id": "http://cdi4exas.org/CDIF4XAS_Reference_Concepts"
 			},
 			"references": "https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md"
+		},
+		{
+			"@id": "http://cdi4exas.org/probe",
+			"@type": "skos:Concept",
+			"prefLabel": {
+				"@value": "Probe",
+				"@language": "en"
+			},
+			"definition": {
+				"@value": "",
+				"@language": "en"
+			},
+			"inScheme": {
+				"@id": "http://cdi4exas.org/CDIF4XAS_Reference_Concepts"
+			},
+			"references": "https://manual.nexusformat.org/classes/base_classes/NXsource.html#probe"
+		},
+		{
+			"@id": "http://cdi4exas.org/point_group",
+			"@type": "skos:Concept",
+			"prefLabel": {
+				"@value": "Sample Point Group",
+				"@language": "en"
+			},
+			"definition": {
+				"@value": "",
+				"@language": "en"
+			},
+			"inScheme": {
+				"@id": "http://cdi4exas.org/CDIF4XAS_Reference_Concepts"
+			},
+			"references": "https://manual.nexusformat.org/classes/base_classes/NXsample.html#point_group"
+		},
+		{
+			"@id": "http://cdi4exas.org/calibration_method",
+			"@type": "skos:Concept",
+			"prefLabel": {
+				"@value": "Detector Calibration Method",
+				"@language": "en"
+			},
+			"definition": {
+				"@value": "",
+				"@language": "en"
+			},
+			"inScheme": {
+				"@id": "http://cdi4exas.org/CDIF4XAS_Reference_Concepts"
+			},
+			"references": "https://manual.nexusformat.org/classes/base_classes/NXdetector.html#calibration_method"
+		},
+		{
+			"@id": "http://cdi4exas.org/experiment_documentation",
+			"@type": "skos:Concept",
+			"prefLabel": {
+				"@value": "Experiment Documentation",
+				"@language": "en"
+			},
+			"definition": {
+				"@value": "",
+				"@language": "en"
+			},
+			"inScheme": {
+				"@id": "http://cdi4exas.org/CDIF4XAS_Reference_Concepts"
+			},
+			"references": "https://manual.nexusformat.org/classes/base_classes/NXentry.html#experiment_documentation"
+		},
+		{
+			"@id": "http://cdi4exas.org/X-Ray_Monitor",
+			"@type": "skos:Concept",
+			"prefLabel": {
+				"@value": "X-Ray Monitor",
+				"@language": "en"
+			},
+			"definition": {
+				"@value": "",
+				"@language": "en"
+			},
+			"inScheme": {
+				"@id": "http://cdi4exas.org/CDIF4XAS_Reference_Concepts"
+			},
+			"references": "https://manual.nexusformat.org/classes/base_classes/NXmonitor.html"
 		}
 	]
 }
