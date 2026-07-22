@@ -285,15 +285,16 @@ Generated {generated_at}
 <p>SKOS controlled vocabulary of concepts used in CDIF X-ray Absorption Spectroscopy metadata records.
 Concepts that correspond to a class in the
 <a class="ref" href="https://github.com/nexusformat/NeXusOntology" target="_blank" rel="noreferrer">NeXus ontology</a>
-carry a <code>foaf:focus</code> link back to the Nexus class URI. Others (physics concepts, XDI column
-definitions, sample properties Nexus doesn't model) exist as XAS-specific extensions.</p>
+carry a <code>foaf:focus</code> link for the Nexus class URI; note that these URIs do not resolve but the
+identified <code>owl:Class</code> entities are defined in the NeXus ontology. Others (physics concepts,
+XDI column definitions, sample properties Nexus doesn't model) exist as XAS-specific extensions.</p>
 <dl>
 <dt>Namespace</dt><dd><a class="ref" href="{html.escape(scheme_uri)}">{html.escape(scheme_uri)}</a></dd>
 <dt>Concepts</dt><dd>{len(concepts)}</dd>
 <dt>Source</dt><dd><a class="ref" href="{html.escape(source_path.name)}">{html.escape(source_path.name)}</a></dd>
 </dl>
 </section>
-{'\\n'.join(render_concept(c, concept_by_uri, narrower) for c in concepts_sorted)}
+{chr(10).join(render_concept(c, concept_by_uri, narrower) for c in concepts_sorted)}
 </div>
 </main>
 <script>{JS_FILTER}</script>
