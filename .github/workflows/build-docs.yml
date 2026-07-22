@@ -1,0 +1,55 @@
+name: Publish glossary docs
+
+# Regenerates docs/index.html from XAS_Glossary_SKOS_v2.json and deploys it to
+# GitHub Pages (gh-pages branch). Runs on every push to main that changes the
+# glossary or the generator script, plus workflow_dispatch for manual runs.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'XAS_Glossary_SKOS_v2.json'
+      - 'tools/generate_glossary_html.py'
+      - 'docs/**'
+      - '.github/workflows/build-docs.yml'
+  workflow_dispatch:
+
+# Ensure one Pages deploy at a time; queue rather than cancel.
+concurrency:
+  group: publish-glossary-docs
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # peaceiris/actions-gh-pages pushes to gh-pages
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generate glossary HTML
+        run: python tools/generate_glossary_html.py
+
+      - name: Copy source glossary + LICENSE alongside the site
+        # Include the source SKOS JSON-LD and the repo LICENSE so the deployed
+        # docs directory is self-contained. The generator's "Source" link in
+        # the header points at ../XAS_Glossary_SKOS_v2.json; that resolves to
+        # docs/XAS_Glossary_SKOS_v2.json in the deployed site.
+        run: |
+          cp XAS_Glossary_SKOS_v2.json docs/
+          cp LICENSE docs/ || true
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          keep_files: false
+          commit_message: "Publish glossary docs from ${{ github.sha }}"
