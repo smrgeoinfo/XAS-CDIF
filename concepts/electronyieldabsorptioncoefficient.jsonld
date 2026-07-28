@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "schema": "http://schema.org/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "rdfs:seeAlso": {
+      "@type": "@id"
+    },
+    "foaf:focus": {
+      "@type": "@id"
+    }
+  },
+  "@id": "https://w3id.org/cdif/xas/electronyieldabsorptioncoefficient",
+  "@type": [
+    "skos:Concept"
+  ],
+  "skos:prefLabel": {
+    "@value": "Electron yield absorption coefficient",
+    "@language": "en"
+  },
+  "rdfs:seeAlso": "https://manual.nexusformat.org/classes/contributed_definitions/NXxas_tey.html",
+  "skos:broader": [
+    {
+      "@id": "https://w3id.org/cdif/xas/absorptioncoefficient"
+    }
+  ],
+  "skos:definition": {
+    "@value": "Absorption coefficient derived from electron yield, proportional to the ratio of the electron yield intensity and the incident beam intensity.",
+    "@language": "en"
+  },
+  "skos:inScheme": {
+    "@id": "https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts"
+  },
+  "skos:note": {
+    "@value": "Definition adapted from the NeXus NXDL documentation in NXxas_tey.",
+    "@language": "en"
+  }
+}

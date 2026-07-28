@@ -104,9 +104,9 @@ a.concept-link:hover { text-decoration: underline; }
 <h1>Concepts for X-ray absorption spectroscopy</h1>
 <div class="meta">
 Concept scheme URI: <a href="https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts">https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts</a> ·
-89 concepts ·
-Source: <code>XAS_Glossary_SKOS_v2_draft.json</code> ·
-Generated 2026-07-24 16:46 UTC
+104 concepts ·
+Source: <code>XAS_Glossary_SKOS.json</code> ·
+Generated 2026-07-28 23:32 UTC
 </div>
 </header>
 <main>
@@ -115,22 +115,34 @@ Generated 2026-07-24 16:46 UTC
 <div class="filter"><input id="filter-input" type="search" placeholder="Filter…" autocomplete="off"></div>
 <ul>
 <li><a href="#absorptioncoefficient">Absorption coefficient</a> <code>[mutrans]</code></li>
+<li><a href="#analyzercrystal">Analyzer crystal</a></li>
+<li><a href="#analyzerdiameter">Analyzer diameter</a></li>
+<li><a href="#analyzergeometry">Analyzer geometry</a></li>
 <li><a href="#spotsize">Beam spot size</a></li>
 <li><a href="#beamline">Beamline</a></li>
 <li><a href="#energyrange">Beamline energy range</a></li>
 <li><a href="#flux">Beamline flux</a></li>
 <li><a href="#scanmode">Beamline scan mode</a></li>
 <li><a href="#website">Beamline website</a></li>
+<li><a href="#bendingradius">Bending radius</a></li>
+<li><a href="#braggangle">Bragg angle</a></li>
 <li><a href="#calculated">Calculated</a></li>
 <li><a href="#collimation">Collimation</a></li>
+<li><a href="#counttime">Count time</a></li>
 <li><a href="#dspacing">D spacing</a></li>
+<li><a href="#deadtime">Dead time</a></li>
 <li><a href="#calibrationmethod">Detector calibration method</a></li>
 <li><a href="#detectori0">Detector method for incident flux</a> <code>[detector.i0]</code></li>
 <li><a href="#detectorit">Detector method for transmitted flux</a> <code>[detector.it]</code></li>
 <li><a href="#detectortype">Detector type</a></li>
 <li><a href="#edgeanalyzed">Edge analyzed</a></li>
 <li><a href="#edgeenergy">Edge energy</a></li>
+<li><a href="#electronyieldabsorptioncoefficient">Electron yield absorption coefficient</a></li>
+<li><a href="#electronyieldintensity">Electron yield intensity</a> <code>[iey]</code></li>
 <li><a href="#elementanalyzed">Element analyzed</a></li>
+<li><a href="#emissionenergy">Emission energy</a></li>
+<li><a href="#emissionenergywindow">Emission energy window</a></li>
+<li><a href="#emissionline">Emission line</a> <code>[emissionline]</code></li>
 <li><a href="#energyerror">Energy error</a></li>
 <li><a href="#energyresolution">Energy resolution</a></li>
 <li><a href="#exafsfunction">EXAFS function chi(k)</a> <code>[chi]</code></li>
@@ -154,6 +166,7 @@ Generated 2026-07-24 16:46 UTC
 <li><a href="#incidentintensity">Incident intensity</a> <code>[i0]</code></li>
 <li><a href="#installedoptions">Installed options</a></li>
 <li><a href="#instrument">Instrument</a></li>
+<li><a href="#intensityuncertainty">Intensity uncertainty</a></li>
 <li><a href="#monitormode">Monitor mode</a></li>
 <li><a href="#monitorpreset">Monitor preset</a></li>
 <li><a href="#monochromatorangle">Monochromator angle</a> <code>[angle]</code></li>
@@ -171,6 +184,8 @@ Generated 2026-07-24 16:46 UTC
 <li><a href="#referenceabsorptioncoefficient">Reference absorption coefficient</a> <code>[murefer]</code></li>
 <li><a href="#referenceintensity">Reference intensity</a> <code>[irefer]</code></li>
 <li><a href="#reflectionplane">Reflection plane</a></li>
+<li><a href="#retardingvoltage">Retarding voltage</a></li>
+<li><a href="#rowlandradius">Rowland radius</a></li>
 <li><a href="#sampleanalysisevent">Sample analysis event</a></li>
 <li><a href="#samplechemicalcomposition">Sample chemical composition</a></li>
 <li><a href="#concentration">Sample concentration</a></li>
@@ -216,8 +231,8 @@ identified <code>owl:Class</code> entities are defined in the NeXus ontology. Ot
 XDI column definitions, sample properties Nexus doesn't model) exist as XAS-specific extensions.</p>
 <dl>
 <dt>Namespace</dt><dd><a class="ref" href="https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts">https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts</a></dd>
-<dt>Concepts</dt><dd>89</dd>
-<dt>Source</dt><dd><a class="ref" href="XAS_Glossary_SKOS_v2_draft.json">XAS_Glossary_SKOS_v2_draft.json</a></dd>
+<dt>Concepts</dt><dd>104</dd>
+<dt>Source</dt><dd><a class="ref" href="XAS_Glossary_SKOS.json">XAS_Glossary_SKOS.json</a></dd>
 </dl>
 </section>
 <section id="absorptioncoefficient" class="concept">
@@ -225,7 +240,32 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <div class="uri">https://w3id.org/cdif/xas/absorptioncoefficient</div>
 <dl>
 <dt>Definition</dt><dd>A coefficient μ(E) calculated as the natural log of the ratio of incident over transmitted x-ray intensity, divided by the thickness of the sample.</dd>
+<dt>Narrower</dt><dd><a class="concept-link" href="#electronyieldabsorptioncoefficient">Electron yield absorption coefficient</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://dictionary.iucr.org/Absorption_Coefficient" target="_blank" rel="noreferrer">https://dictionary.iucr.org/Absorption_Coefficient</a></dd>
+</dl></section>
+<section id="analyzercrystal" class="concept">
+<h3>Analyzer crystal</h3>
+<div class="uri">https://w3id.org/cdif/xas/analyzercrystal</div>
+<dl>
+<dt>Definition</dt><dd>Crystal used to energy-analyze emitted fluorescence in high energy resolution fluorescence detected measurement, distinct from the monochromator crystal that selects the incident energy.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_herfd.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html</a></dd>
+</dl></section>
+<section id="analyzerdiameter" class="concept">
+<h3>Analyzer diameter</h3>
+<div class="uri">https://w3id.org/cdif/xas/analyzerdiameter</div>
+<dl>
+<dt>Definition</dt><dd>Diameter of the crystal analyzer wafer.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_herfd.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html</a></dd>
+</dl></section>
+<section id="analyzergeometry" class="concept">
+<h3>Analyzer geometry</h3>
+<div class="uri">https://w3id.org/cdif/xas/analyzergeometry</div>
+<dl>
+<dt>Definition</dt><dd>Type of crystal analyzer geometry, such as Johann or Johansson.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_herfd.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html</a></dd>
 </dl></section>
 <section id="spotsize" class="concept">
 <h3>Beam spot size</h3>
@@ -276,6 +316,22 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>Definition</dt><dd>Web URL for beamline information or documentation.</dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 </dl></section>
+<section id="bendingradius" class="concept">
+<h3>Bending radius</h3>
+<div class="uri">https://w3id.org/cdif/xas/bendingradius</div>
+<dl>
+<dt>Definition</dt><dd>Bending radius of a spherically bent crystal analyzer. In Johann geometry this is twice the Rowland radius.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_herfd.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html</a></dd>
+</dl></section>
+<section id="braggangle" class="concept">
+<h3>Bragg angle</h3>
+<div class="uri">https://w3id.org/cdif/xas/braggangle</div>
+<dl>
+<dt>Definition</dt><dd>Bragg angle of the nominal reflection of a crystal analyzer.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_herfd.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html</a></dd>
+</dl></section>
 <section id="calculated" class="concept">
 <h3>Calculated</h3>
 <div class="uri">https://w3id.org/cdif/xas/calculated</div>
@@ -297,6 +353,14 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 <dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/base_classes/NXcollimator.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/base_classes/NXcollimator.html</a></dd>
 </dl></section>
+<section id="counttime" class="concept">
+<h3>Count time</h3>
+<div class="uri">https://w3id.org/cdif/xas/counttime</div>
+<dl>
+<dt>Definition</dt><dd>Detector live time per energy point: the interval during which the detector is actively counting.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_pfy.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pfy.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pfy.html</a></dd>
+</dl></section>
 <section id="dspacing" class="concept">
 <h3>D spacing</h3>
 <div class="uri">https://w3id.org/cdif/xas/dspacing</div>
@@ -307,6 +371,14 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>References</dt><dd><a class="ref" href="https://dictionary.iucr.org/Interplanar_spacing" target="_blank" rel="noreferrer">https://dictionary.iucr.org/Interplanar_spacing</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 <dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/base_classes/NXcrystal.html#nxcrystal-d-spacing-field" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/base_classes/NXcrystal.html#nxcrystal-d-spacing-field</a></dd>
+</dl></section>
+<section id="deadtime" class="concept">
+<h3>Dead time</h3>
+<div class="uri">https://w3id.org/cdif/xas/deadtime</div>
+<dl>
+<dt>Definition</dt><dd>Detector dead time per energy point: the interval during which the detector cannot register further events.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_pfy.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pfy.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pfy.html</a></dd>
 </dl></section>
 <section id="calibrationmethod" class="concept">
 <h3>Detector calibration method</h3>
@@ -349,6 +421,7 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>Note</dt><dd>The &#x27;edge&#x27; is a sudden increase in x-ray absorption occurring when the energy of incident X-rays is just above the binding energy of the targeted electron shell of the atoms interacting with the photons. vocabulary from XDI spec: {K, L, L1, L2, L3, M, M1, M2, M3, M4, M5, N, N1, N2, N3, N4, N5, N6, N7, O, O1, O2, O3, O4, O5, O6, O7}.  Used in XDI and NeXus to refer to the shell of the atom where the electron hole is created (K, L, etc).   The absorption edge is defined as K, L, L1, etc.  That indicates the electronic energy levels involved in the absorption. The edge_energy tells us how much is the value of the energy of the electronic energy levels involved in that particular absorption edge.  see https://xrayabsorption.org/xraytable/</dd>
 <dt>References</dt><dd><a class="ref" href="https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md" target="_blank" rel="noreferrer">https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
+<dt>References</dt><dd><a class="ref" href="https://w3id.org/cdif/xas/XAS_AbsorptionEdges" target="_blank" rel="noreferrer">https://w3id.org/cdif/xas/XAS_AbsorptionEdges</a></dd>
 </dl></section>
 <section id="edgeenergy" class="concept">
 <h3>Edge energy</h3>
@@ -361,6 +434,23 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>References</dt><dd><a class="ref" href="https://dictionary.iucr.org/Absorption_edge" target="_blank" rel="noreferrer">https://dictionary.iucr.org/Absorption_edge</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 </dl></section>
+<section id="electronyieldabsorptioncoefficient" class="concept">
+<h3>Electron yield absorption coefficient</h3>
+<div class="uri">https://w3id.org/cdif/xas/electronyieldabsorptioncoefficient</div>
+<dl>
+<dt>Definition</dt><dd>Absorption coefficient derived from electron yield, proportional to the ratio of the electron yield intensity and the incident beam intensity.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_tey.</dd>
+<dt>Broader</dt><dd><a class="concept-link" href="#absorptioncoefficient">Absorption coefficient</a></dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_tey.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_tey.html</a></dd>
+</dl></section>
+<section id="electronyieldintensity" class="concept">
+<h3>Electron yield intensity<span class="notation-badge">iey</span></h3>
+<div class="uri">https://w3id.org/cdif/xas/electronyieldintensity</div>
+<dl>
+<dt>Definition</dt><dd>Intensity measured as the drain current or total electron current from electrons emitted by the sample surface, used to derive the absorption coefficient in electron-yield detection.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_tey.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_tey.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_tey.html</a></dd>
+</dl></section>
 <section id="elementanalyzed" class="concept">
 <h3>Element analyzed</h3>
 <div class="uri">https://w3id.org/cdif/xas/elementanalyzed</div>
@@ -370,6 +460,29 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>References</dt><dd><a class="ref" href="https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md" target="_blank" rel="noreferrer">https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.1351/goldbook.C01022" target="_blank" rel="noreferrer">https://doi.org/10.1351/goldbook.C01022</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
+</dl></section>
+<section id="emissionenergy" class="concept">
+<h3>Emission energy</h3>
+<div class="uri">https://w3id.org/cdif/xas/emissionenergy</div>
+<dl>
+<dt>Definition</dt><dd>Emission energy at which the spectrometer is set in high energy resolution fluorescence detected measurement.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_herfd.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html</a></dd>
+</dl></section>
+<section id="emissionenergywindow" class="concept">
+<h3>Emission energy window</h3>
+<div class="uri">https://w3id.org/cdif/xas/emissionenergywindow</div>
+<dl>
+<dt>Definition</dt><dd>Lower and upper bounds of the detected emission energy window: the energy range over which fluorescence photons are accepted, whether defined by a detector channel range or a spectrometer region of interest.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_pfy.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pfy.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pfy.html</a></dd>
+</dl></section>
+<section id="emissionline" class="concept">
+<h3>Emission line<span class="notation-badge">emissionline</span></h3>
+<div class="uri">https://w3id.org/cdif/xas/emissionline</div>
+<dl>
+<dt>Definition</dt><dd>X-ray emission line observed when a core vacancy is filled, identified by the initial and final edge. Used to specify the detected emission in partial fluorescence yield and high energy resolution fluorescence detected measurements.</dd>
+<dt>References</dt><dd><a class="ref" href="https://w3id.org/cdif/xas/XAS_EmissionLines" target="_blank" rel="noreferrer">https://w3id.org/cdif/xas/XAS_EmissionLines</a></dd>
 </dl></section>
 <section id="energyerror" class="concept">
 <h3>Energy error</h3>
@@ -586,6 +699,14 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 <dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/base_classes/NXinstrument.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/base_classes/NXinstrument.html</a></dd>
 </dl></section>
+<section id="intensityuncertainty" class="concept">
+<h3>Intensity uncertainty</h3>
+<div class="uri">https://w3id.org/cdif/xas/intensityuncertainty</div>
+<dl>
+<dt>Definition</dt><dd>Errors associated with the intensity of the spectrum.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas.html</a></dd>
+</dl></section>
 <section id="monitormode" class="concept">
 <h3>Monitor mode</h3>
 <div class="uri">https://w3id.org/cdif/xas/monitormode</div>
@@ -748,6 +869,22 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>References</dt><dd><a class="ref" href="https://www.iucr.org/__data/assets/pdf_file/0004/60637/IUCr2011-XAFS-Tutorial_-Ascone.pdf" target="_blank" rel="noreferrer">https://www.iucr.org/__data/assets/pdf_file/0004/60637/IUCr2011-XAFS-Tutorial_-Ascone.pdf</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 <dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/base_classes/NXcrystal.html#nxcrystal-reflection-field" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/base_classes/NXcrystal.html#nxcrystal-reflection-field</a></dd>
+</dl></section>
+<section id="retardingvoltage" class="concept">
+<h3>Retarding voltage</h3>
+<div class="uri">https://w3id.org/cdif/xas/retardingvoltage</div>
+<dl>
+<dt>Definition</dt><dd>Retarding voltage (bias) applied to select electrons above a kinetic energy threshold, discriminating against low-energy secondary electrons in partial electron yield detection.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_pey.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pey.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_pey.html</a></dd>
+</dl></section>
+<section id="rowlandradius" class="concept">
+<h3>Rowland radius</h3>
+<div class="uri">https://w3id.org/cdif/xas/rowlandradius</div>
+<dl>
+<dt>Definition</dt><dd>Radius of the Rowland circle, on which the sample, crystal centre and detector focus all lie.</dd>
+<dt>Note</dt><dd>Definition adapted from the NeXus NXDL documentation in NXxas_herfd.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/contributed_definitions/NXxas_herfd.html</a></dd>
 </dl></section>
 <section id="sampleanalysisevent" class="concept">
 <h3>Sample analysis event</h3>
@@ -1045,6 +1182,7 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>Note</dt><dd>Property of experiment; controlled list of process being monitored to obtain the spectrum.  One of {&#x27;Total Electron Yield&#x27; , &#x27;Partial Electron Yield&#x27; , &#x27;Auger Electron Yield&#x27; , &#x27;Fluorescence Yield&#x27; , &#x27;Transmission&#x27;}.</dd>
 <dt>foaf:focus</dt><dd><a class="ref" href="http://purl.org/nexusformat/definitions/Field/NXxas/ENTRY/DATA/mode" target="_blank" rel="noreferrer">http://purl.org/nexusformat/definitions/Field/NXxas/ENTRY/DATA/mode</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
+<dt>References</dt><dd><a class="ref" href="https://w3id.org/cdif/xas/XAS_DetectionModes" target="_blank" rel="noreferrer">https://w3id.org/cdif/xas/XAS_DetectionModes</a></dd>
 <dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/applications/NXxas.html#nxxas-entry-data-mode-field" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/applications/NXxas.html#nxxas-entry-data-mode-field</a></dd>
 </dl></section>
 </div>
