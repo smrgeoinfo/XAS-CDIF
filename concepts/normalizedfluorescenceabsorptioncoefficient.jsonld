@@ -11,6 +11,11 @@
     },
     "foaf:focus": {
       "@type": "@id"
+    },
+    "qudt": "http://qudt.org/schema/qudt/",
+    "unit": "http://qudt.org/vocab/unit/",
+    "qudt:hasUnit": {
+      "@type": "@id"
     }
   },
   "@id": "https://w3id.org/cdif/xas/normalizedfluorescenceabsorptioncoefficient",
@@ -25,6 +30,7 @@
     "https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md",
     "https://doi.org/10.5281/zenodo.14920226"
   ],
+  "qudt:hasUnit": "unit:UNITLESS",
   "skos:definition": {
     "@value": "The normalized fluorescence-yield absorption coefficient µ(E), rescaled to unit edge-step.",
     "@language": "en"
@@ -35,8 +41,14 @@
   "skos:notation": [
     "normfluor"
   ],
-  "skos:note": {
-    "@value": "XDI Column.normfluor: normalized mu fluorescence.",
-    "@language": "en"
-  }
+  "skos:note": [
+    {
+      "@value": "XDI Column.normfluor: normalized mu fluorescence.",
+      "@language": "en"
+    },
+    {
+      "@value": "Dimensionless: rescaled to unit edge step. Stated here because the file formats do not record a unit for this quantity, so a consumer cannot otherwise tell 'dimensionless' from 'unit not recorded'.",
+      "@language": "en"
+    }
+  ]
 }

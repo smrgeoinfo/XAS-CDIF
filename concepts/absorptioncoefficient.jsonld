@@ -11,6 +11,11 @@
     },
     "foaf:focus": {
       "@type": "@id"
+    },
+    "qudt": "http://qudt.org/schema/qudt/",
+    "unit": "http://qudt.org/vocab/unit/",
+    "qudt:hasUnit": {
+      "@type": "@id"
     }
   },
   "@id": "https://w3id.org/cdif/xas/absorptioncoefficient",
@@ -47,15 +52,22 @@
         "@id": "https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts"
       },
       "rdfs:seeAlso": "https://manual.nexusformat.org/classes/contributed_definitions/NXxas_tey.html",
-      "skos:note": {
-        "@value": "Definition adapted from the NeXus NXDL documentation in NXxas_tey.",
-        "@language": "en"
-      },
+      "skos:note": [
+        {
+          "@value": "Definition adapted from the NeXus NXDL documentation in NXxas_tey.",
+          "@language": "en"
+        },
+        {
+          "@value": "Dimensionless: proportional to a current ratio. Stated here because the file formats do not record a unit for this quantity, so a consumer cannot otherwise tell 'dimensionless' from 'unit not recorded'.",
+          "@language": "en"
+        }
+      ],
       "skos:broader": [
         {
           "@id": "https://w3id.org/cdif/xas/absorptioncoefficient"
         }
-      ]
+      ],
+      "qudt:hasUnit": "unit:UNITLESS"
     }
   ],
   "skos:notation": [

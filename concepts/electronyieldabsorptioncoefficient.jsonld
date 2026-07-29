@@ -11,6 +11,11 @@
     },
     "foaf:focus": {
       "@type": "@id"
+    },
+    "qudt": "http://qudt.org/schema/qudt/",
+    "unit": "http://qudt.org/vocab/unit/",
+    "qudt:hasUnit": {
+      "@type": "@id"
     }
   },
   "@id": "https://w3id.org/cdif/xas/electronyieldabsorptioncoefficient",
@@ -21,6 +26,7 @@
     "@value": "Electron yield absorption coefficient",
     "@language": "en"
   },
+  "qudt:hasUnit": "unit:UNITLESS",
   "rdfs:seeAlso": "https://manual.nexusformat.org/classes/contributed_definitions/NXxas_tey.html",
   "skos:broader": [
     {
@@ -34,8 +40,14 @@
   "skos:inScheme": {
     "@id": "https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts"
   },
-  "skos:note": {
-    "@value": "Definition adapted from the NeXus NXDL documentation in NXxas_tey.",
-    "@language": "en"
-  }
+  "skos:note": [
+    {
+      "@value": "Definition adapted from the NeXus NXDL documentation in NXxas_tey.",
+      "@language": "en"
+    },
+    {
+      "@value": "Dimensionless: proportional to a current ratio. Stated here because the file formats do not record a unit for this quantity, so a consumer cannot otherwise tell 'dimensionless' from 'unit not recorded'.",
+      "@language": "en"
+    }
+  ]
 }
