@@ -104,9 +104,9 @@ a.concept-link:hover { text-decoration: underline; }
 <h1>Concepts for X-ray absorption spectroscopy</h1>
 <div class="meta">
 Concept scheme URI: <a href="https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts">https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts</a> ·
-104 concepts ·
+105 concepts ·
 Source: <code>XAS_Glossary_SKOS.json</code> ·
-Generated 2026-07-28 23:32 UTC
+Generated 2026-07-29 16:29 UTC
 </div>
 </header>
 <main>
@@ -191,6 +191,7 @@ Generated 2026-07-28 23:32 UTC
 <li><a href="#concentration">Sample concentration</a></li>
 <li><a href="#samplecrystalstructure">Sample crystal structure</a></li>
 <li><a href="#density">Sample density</a></li>
+<li><a href="#sampledescription">Sample description</a></li>
 <li><a href="#electricfield">Sample electric field</a></li>
 <li><a href="#electrochemicalpotential">Sample electrochemical potential</a></li>
 <li><a href="#magneticfield">Sample magnetic field</a></li>
@@ -231,7 +232,7 @@ identified <code>owl:Class</code> entities are defined in the NeXus ontology. Ot
 XDI column definitions, sample properties Nexus doesn't model) exist as XAS-specific extensions.</p>
 <dl>
 <dt>Namespace</dt><dd><a class="ref" href="https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts">https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts</a></dd>
-<dt>Concepts</dt><dd>104</dd>
+<dt>Concepts</dt><dd>105</dd>
 <dt>Source</dt><dd><a class="ref" href="XAS_Glossary_SKOS.json">XAS_Glossary_SKOS.json</a></dd>
 </dl>
 </section>
@@ -935,6 +936,14 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>References</dt><dd><a class="ref" href="https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md" target="_blank" rel="noreferrer">https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md</a></dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 <dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/base_classes/NXsample.html#nxsample-density-field" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/base_classes/NXsample.html#nxsample-density-field</a></dd>
+</dl></section>
+<section id="sampledescription" class="concept">
+<h3>Sample description</h3>
+<div class="uri">https://w3id.org/cdif/xas/sampledescription</div>
+<dl>
+<dt>Definition</dt><dd>Free-text description of the sample. Broader than sample preparation: it may record the sample&#x27;s form, dimensions, provenance or identity as well as how it was prepared.</dd>
+<dt>Note</dt><dd>Grounded in the NeXus NXDL documentation for NXsample/description, &#x27;Description of the sample&#x27;. Minted 2026-07-28 because the glossary had no general free-text sample concept, which forced samplepreparation into a closeMatch against that field. XDI has no counterpart tag; its Sample.prep text maps to samplepreparation.</dd>
+<dt>See also</dt><dd><a class="ref" href="https://manual.nexusformat.org/classes/base_classes/NXsample.html" target="_blank" rel="noreferrer">https://manual.nexusformat.org/classes/base_classes/NXsample.html</a></dd>
 </dl></section>
 <section id="electricfield" class="concept">
 <h3>Sample electric field</h3>
