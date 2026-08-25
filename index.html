@@ -104,9 +104,9 @@ a.concept-link:hover { text-decoration: underline; }
 <h1>Concepts for X-ray absorption spectroscopy</h1>
 <div class="meta">
 Concept scheme URI: <a href="https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts">https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts</a> ·
-105 concepts ·
+106 concepts ·
 Source: <code>XAS_Glossary_SKOS.json</code> ·
-Generated 2026-08-25 17:36 UTC
+Generated 2026-08-25 19:27 UTC
 </div>
 </header>
 <main>
@@ -183,6 +183,7 @@ Generated 2026-08-25 17:36 UTC
 <li><a href="#radialdistance">Radial distance</a> <code>[r]</code></li>
 <li><a href="#referenceabsorptioncoefficient">Reference absorption coefficient</a> <code>[murefer]</code></li>
 <li><a href="#referenceintensity">Reference intensity</a> <code>[irefer]</code></li>
+<li><a href="#referencesample">Reference sample</a> <code>[Sample.reference]</code></li>
 <li><a href="#reflectionplane">Reflection plane</a></li>
 <li><a href="#retardingvoltage">Retarding voltage</a></li>
 <li><a href="#rowlandradius">Rowland radius</a></li>
@@ -232,7 +233,7 @@ identified <code>owl:Class</code> entities are defined in the NeXus ontology. Ot
 XDI column definitions, sample properties Nexus doesn't model) exist as XAS-specific extensions.</p>
 <dl>
 <dt>Namespace</dt><dd><a class="ref" href="https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts">https://w3id.org/cdif/xas/CDIF4XAS_Reference_Concepts</a></dd>
-<dt>Concepts</dt><dd>105</dd>
+<dt>Concepts</dt><dd>106</dd>
 <dt>Source</dt><dd><a class="ref" href="XAS_Glossary_SKOS.json">XAS_Glossary_SKOS.json</a></dd>
 </dl>
 </section>
@@ -858,6 +859,14 @@ XDI column definitions, sample properties Nexus doesn't model) exist as XAS-spec
 <dt>Definition</dt><dd>measured x-ray intensity after passing through a reference sample with know absorption characteristics.</dd>
 <dt>Note</dt><dd>Use to calibrate monochromator energy, check for drift in incident energry.</dd>
 <dt>References</dt><dd><a class="ref" href="https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md" target="_blank" rel="noreferrer">https://github.com/XraySpectroscopy/XAS-Data-Interchange/blob/master/specification/dictionary.md</a></dd>
+<dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
+</dl></section>
+<section id="referencesample" class="concept">
+<h3>Reference sample<span class="notation-badge">Sample.reference</span></h3>
+<div class="uri">https://w3id.org/cdif/xas/referencesample</div>
+<dl>
+<dt>Definition</dt><dd>The reference material measured simultaneously with the specimen, used for energy calibration and scan-to-scan alignment. Typically a foil or powder of known composition (e.g. &#x27;Cd foil&#x27;, &#x27;GaAs powder&#x27;). Distinct from the reference element symbol, which identifies only the absorbing element of that material.</dd>
+<dt>Note</dt><dd>Minted 2026-08-25 for the XDI extension header Sample.reference, which appears in 10 of the 55 files in the example corpus but is not in the XDI dictionary. Recorded as source &#x27;dat&#x27; in archive/XDI-CDIF-Mapping.xlsx.</dd>
 <dt>References</dt><dd><a class="ref" href="https://doi.org/10.5281/zenodo.14920226" target="_blank" rel="noreferrer">https://doi.org/10.5281/zenodo.14920226</a></dd>
 </dl></section>
 <section id="reflectionplane" class="concept">
